@@ -10,8 +10,12 @@ secret = "_" * hidden.length
 a = []
 #puts hidden #uncomment for better debugging
 while left > 0
- puts secret + " %d chars left, %i bads\n" % [left,bads]
+ puts secret + " %d chars left, %i bads (enter '?' to solve)\n" % [left,bads]
  input = gets[0]
+ if input == '?'
+  puts "the word you are searching for is \"%s\"" % [hidden]
+  exit
+ end
  if a.include?(input)
   puts "you already had %s" % input
  else
