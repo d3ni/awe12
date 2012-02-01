@@ -1,15 +1,16 @@
+#!/usr/bin/env ruby
 # Hangman by Thomas Liebschwager (d3ni@tzi.de)
 words = %w(Faultier Feldhase Hanfseil Ortsteil Turbinen Ratgeber Giraffen Sturheit Geldwert Sandsack Sitzbank Nilpferd Blaumann)
 MAXATTEMPTS = 6
 attempts = 0
-word = dictionary[rand(words.size) - 1].upcase
+word = words[rand(words.size) - 1].upcase
 display = word.gsub(/./, "_")
 entered = Array.new
 
 while attempts < MAXATTEMPTS
     print "#{display} \n"
     if display == word
-        print "You win!"
+        print "You win!\n"
         exit
     end    
     print "#{attempts} of #{MAXATTEMPTS} allowed errors\n"
@@ -35,4 +36,4 @@ while attempts < MAXATTEMPTS
     end
 end
 
-print "You lose. The word is #{word}"
+print "You lose. The word is #{word}\n"
