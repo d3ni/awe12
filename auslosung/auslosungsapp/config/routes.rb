@@ -1,5 +1,5 @@
 Auslosungsapp::Application.routes.draw do
-  get "teams/new"
+  resources :teams
 
   get "static_pages/about"
 

@@ -1,2 +1,20 @@
-<h1>Teams#new</h1>
-<p>Find me in app/views/teams/new.html.erb</p>
+<h1>Add a team</h1>
+
+<%= form_for(@team) do |f| %>
+  <%= render 'shared/error_messages' %>
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :manager %><br />
+    <%= f.text_field :manager %>
+  </div>
+  <div class="field">
+    <%= f.label :teamid %><br />
+    <%= f.text_field :teamid %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Sign up" %>
+  </div>
+<% end %>
