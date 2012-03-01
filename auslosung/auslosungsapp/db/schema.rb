@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120228161337) do
+ActiveRecord::Schema.define(:version => 20120301135842) do
 
   create_table "teams", :force => true do |t|
     t.integer  "teamid"
@@ -20,5 +20,7 @@ ActiveRecord::Schema.define(:version => 20120228161337) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
+
+  add_index "teams", ["teamid"], :name => "index_teams_on_teamid", :unique => true
 
 end
