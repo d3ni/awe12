@@ -34,4 +34,33 @@ describe "TeamPages" do
       end
     end
   end
+  
+  describe "edit" do
+    let(:team) { FactoryGirl.create(:team) }
+    before { visit edit_team_path(team) }
+
+    describe "with invalid information" do
+      let(:error) { '1 error prohibited this team from being saved' }
+      before { click_button "Update" }
+
+      it { should have_content(error) }
+    end
+    
+    describe "with valid information" do
+      let(:team)      { FactoryGirl.create(:team) }
+      let(:new_name)  { "New Name" }
+      let(:new_manager) { "New Manager" }
+      before do
+        fill_in "Name",         with: new_name
+        fill_in "Manager",        with: new_manager
+        fill_in "Teamid",     with: team.teamid
+        click_button "Update"
+      end
+
+      it { should have_content(new_name) }
+      it { should have_selector('div.flash.success') }
+      specify { team.reload.name.should  == new_name }
+      specify { team.reload.manager.should == new_manager }
+    end
+  end
 end
