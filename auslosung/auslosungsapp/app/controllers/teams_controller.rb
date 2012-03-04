@@ -24,12 +24,16 @@ class TeamsController < ApplicationController
   
   def edit
     @team = Team.find(params[:id])
-    #if @team.update_attributes(params[:team])
-      #flash[:success] = "Team updated"
-      #redirect_to @team
-    #else
-      #render 'edit'
-    #end
+  end
+  
+  def update
+    @team = Team.find(params[:id])
+    if @team.update_attributes(params[:team])
+      flash[:success] = "Team updated"
+      redirect_to @team
+    else
+      render 'edit'
+    end
   end
   
   def destroy
