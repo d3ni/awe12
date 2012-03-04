@@ -1,0 +1,17 @@
+Ruby on Rails Tutorial by Michael Hartl
+http://ruby.railstutorial.org/book/ruby-on-rails-tutorial?version=3.2
+
+Ruby 1.9.3 core API
+http://ruby-doc.org/core-1.9.3/
+
+Ruby 1.9.3 Standard Library
+http://ruby-doc.org/stdlib-1.9.3/
+
+Ruby on Rails API
+http://api.rubyonrails.org/
+
+Rubular - a Ruby regular expression editor
+http://www.rubular.com/
+
+CSS API
+http://aptana.com/reference/html/api/CSS.index.html
