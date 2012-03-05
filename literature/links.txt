@@ -15,3 +15,6 @@ http://www.rubular.com/
 
 CSS API
 http://aptana.com/reference/html/api/CSS.index.html
+
+Rails 3 Cheatsheet
+http://blog.envylabs.com/Rails_3_Cheat_Sheets.pdf
